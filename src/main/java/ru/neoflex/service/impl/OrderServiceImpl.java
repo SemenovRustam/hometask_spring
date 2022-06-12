@@ -6,6 +6,8 @@ import lombok.Setter;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Service;
 import ru.neoflex.model.Order;
 import ru.neoflex.repository.OrderRepository;
 import ru.neoflex.service.OrderService;
@@ -20,11 +22,14 @@ import java.time.LocalDateTime;
  */
 @Log
 @RequiredArgsConstructor
+@Service
+@PropertySource("application.properties")
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
 
     @Setter
+    @Value("${sum}")
     private Double standardSum;
 
     @Override

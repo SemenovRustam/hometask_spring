@@ -1,6 +1,7 @@
 package ru.neoflex.repository.impl;
 
 import lombok.extern.java.Log;
+import org.springframework.stereotype.Repository;
 import ru.neoflex.model.Order;
 import ru.neoflex.repository.OrderRepository;
 
@@ -10,6 +11,7 @@ import ru.neoflex.repository.OrderRepository;
  * @author nanikeev
  */
 @Log
+@Repository
 class OrderRepositoryImpl implements OrderRepository {
 
     @Override
