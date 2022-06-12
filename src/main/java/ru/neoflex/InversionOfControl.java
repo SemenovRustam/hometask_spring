@@ -12,7 +12,7 @@ import ru.neoflex.service.OrderService;
 public class InversionOfControl {
 
     public static void main(String... args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("autowiredAppContext.xml");
         OrderService orderService = context.getBean(OrderService.class);
         orderService.createNew(1L);
     }
